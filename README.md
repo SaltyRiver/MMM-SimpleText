@@ -6,7 +6,7 @@ You can use a sentence of choice and use some minor formatting options.
 1. Navigate into the modules directory and clone the repo:
 ```
   cd MagicMirror/modules
-  git clone
+  git clone https://github.com/SaltyRiver/MMM-SimpleText.git
 ```
 
 2. Insert the following part into your config file and choose your settings
