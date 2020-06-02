@@ -2,6 +2,8 @@
 Simple and plain text module for the [MagicMirror²](https://github.com/MichMich/MagicMirror) project.
 You can use a sentence of choice and use some minor formatting options.
 
+![Screenshot](demo screenshot.png)
+
 # Installation
 1. Navigate into the modules directory and clone the repo:
 ```
@@ -35,4 +37,33 @@ You can use a sentence of choice and use some minor formatting options.
 		}
 },
 
+```
+
+
+# Customizaton example
+![Screenshot](screenshot green.png)
+
+
+```
+{
+ 	module: 'MMM-SimpleText',
+ 	position: 'top_center',
+ 	config: {
+			text: {
+			  'value': 'I am green!'
+			},
+			fontURL: {
+			  'value': 'Tahoma, Geneva, sans-serif'
+			},
+			fontSize: {
+			  'value': 'xx-large'
+			},
+			fontStyle: {
+			  'value': 'normal'
+			},
+			color: {
+			  'value': '#008000'
+			}
+		}
+},
 ```
