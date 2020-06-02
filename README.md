@@ -2,7 +2,7 @@
 Simple and plain text module for the [MagicMirror²](https://github.com/MichMich/MagicMirror) project.
 You can use a sentence of choice and use some minor formatting options.
 
-![Screenshot](demo screenshot.png)
+![Screenshot](demo_screenshot.png)
 
 # Installation
 1. Navigate into the modules directory and clone the repo:
@@ -41,7 +41,7 @@ You can use a sentence of choice and use some minor formatting options.
 
 
 # Customizaton example
-![Screenshot](screenshot green.png)
+![Screenshot](screenshot_green.png)
 
 
 ```
