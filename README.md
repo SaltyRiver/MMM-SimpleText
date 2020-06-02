@@ -40,7 +40,7 @@ You can use a sentence of choice and use some minor formatting options.
 ```
 
 
-# Customizaton example
+# Customization example
 ![Screenshot](screenshot_green.png)
 
 
