@@ -1,5 +1,5 @@
 # MMM-SimpleText
-Simple and plain text module for the [MagicMirror²](https://github.com/MichMich/MagicMirror project.
+Simple and plain text module for the [MagicMirror²](https://github.com/MichMich/MagicMirror) project.
 You can use a sentence of choice and use some minor formatting options.
 
 # Installation
