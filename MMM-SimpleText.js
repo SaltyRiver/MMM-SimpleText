@@ -16,6 +16,9 @@ Module.register('MMM-SimpleText', {
 		color: {
 			"value": ""
 		},
+		refreshMs: {
+			"value": 3600000
+		},
 		filePath: {
 			"value": ""
 		},
@@ -84,8 +87,8 @@ Module.register('MMM-SimpleText', {
 		this.updateDom();
 		setTimeout( () => {
 			this.refresh();
-		}, 3600000);  // In millisecs, refresh every hour.
-  },
+		}, this.config.refreshMs["value"]);
+	},
   
     //Read content from local file
 	readFileContent: function (callback) {
