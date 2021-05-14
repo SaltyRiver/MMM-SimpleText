@@ -74,7 +74,7 @@ The following properties can also be used to add more functionality:
 
 1. refreshMs - Refresh this module every x milliseconds (default: 3600000)
 ```
-  refreshMs: {
+refreshMs: {
   'value': '10000'
 },
 ```
@@ -82,7 +82,7 @@ The following properties can also be used to add more functionality:
 
 2. **filePath** - Read and display the content from a local **.txt** file. 
 **The file has to exist within the MMM-SimpleText directory!** 
-Note that when filePath is beeing used the text property will be ignored.
+Note that when filePath is being used the text property will be ignored.
 ```
 filePath: {
   'value': 'test.txt'
