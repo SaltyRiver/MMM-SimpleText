@@ -15,7 +15,13 @@ Module.register('MMM-SimpleText', {
 		},
 		color: {
 			"value": ""
-		}
+		},
+		filePath: {
+			"value": ""
+		},
+		fileContent: {
+			"value": ""
+		},
     },
 
 	//override dom generator.
@@ -44,6 +50,11 @@ Module.register('MMM-SimpleText', {
             var color = this.config.color["value"];
             return color;
         };
+		
+		var getFilePath = () => {
+            var filePath = this.config.filePath["value"];
+            return filePath;
+        };
 
 		
 		var dom = document.createElement("div");
@@ -54,6 +65,16 @@ Module.register('MMM-SimpleText', {
         dom.style.fontSize = getFontSize();
 		dom.style.fontStyle = getFontStyle();
 		dom.style.color = getColor();
+		
+		//Read file content if path has been given
+		if (getFilePath() !== "") {			
+			var self = this;
+			this.readFileContent(function (response) {
+				self.config.fileContent["value"] = response;
+				dom.innerHTML = self.config.fileContent["value"];
+			});
+		}
+				
 
 		return dom;
 	},
@@ -65,6 +86,20 @@ Module.register('MMM-SimpleText', {
 			this.refresh();
 		}, 3600000);  // In millisecs, refresh every hour.
   },
+  
+    //Read content from local file
+	readFileContent: function (callback) {
+		var xobj = new XMLHttpRequest(),
+			path = this.file(this.config.filePath["value"]);
+		xobj.overrideMimeType("application/text");
+		xobj.open("GET", path, true);
+		xobj.onreadystatechange = function () {
+			if (xobj.readyState === 4 && xobj.status === 200) {
+				callback(xobj.responseText);
+			}
+		};
+		xobj.send(null);
+	},
   
   	notificationReceived: function(notification, payload) {
 		if (notification == "DOM_OBJECTS_CREATED") {
