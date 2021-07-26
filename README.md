@@ -90,6 +90,10 @@ filePath: {
 ```
 
 
+**Linebreaks** - When reading text from a file, line breaks will be included
+![Screenshot](screenshot_rows.png)
+
+
 Below you can find a complete example with those two properties beeing used:
 ```
 {
