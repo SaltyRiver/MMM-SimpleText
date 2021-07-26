@@ -73,7 +73,7 @@ Module.register('MMM-SimpleText', {
 		if (getFilePath() !== "") {			
 			var self = this;
 			this.readFileContent(function (response) {
-				self.config.fileContent["value"] = response;
+				self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
 				dom.innerHTML = self.config.fileContent["value"];
 			});
 		}
