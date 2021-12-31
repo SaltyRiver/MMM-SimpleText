@@ -10,6 +10,9 @@ Module.register('MMM-SimpleText', {
         fontSize: {
             "value": ""
         },
+		fontWeight: {
+			"value": "400"
+		},
         fontStyle: {
             "value": ""
 		},
@@ -44,6 +47,11 @@ Module.register('MMM-SimpleText', {
             return fontSize;
         };
 
+        var getFontWeight = () => {
+            var fontWeight = this.config.fontWeight["value"];
+            return fontWeight;
+        };
+
         var getFontStyle = () => {
             var fontStyle = this.config.fontStyle["value"];
             return fontStyle;
@@ -66,6 +74,7 @@ Module.register('MMM-SimpleText', {
 
         dom.style.fontFamily = getFont();
         dom.style.fontSize = getFontSize();
+		dom.style.fontWeight = getFontWeight();
 		dom.style.fontStyle = getFontStyle();
 		dom.style.color = getColor();
 		
