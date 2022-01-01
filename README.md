@@ -72,7 +72,7 @@ You can use a sentence of choice and use some minor formatting options.
 # Further settings
 The following properties can also be used to add more functionality:
 
-1. refreshMs - Refresh this module every x milliseconds (default: 3600000)
+1. **refreshMs** - Refresh this module every x milliseconds (default: 3600000)
 ```
 refreshMs: {
   'value': '10000'
