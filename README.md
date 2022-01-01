@@ -89,12 +89,14 @@ filePath: {
 },
 ```
 
+3. **fontWeight** - Allows you to set the font weight using CSS numerical or text property values (default: 400)
+	Values: 100 (lightest), 200, 300, 400, 500, 600, 700, 800, 900 (heaviest), 
 
 **Linebreaks** - When reading text from a file, line breaks will be included
 ![Screenshot](screenshot_rows.png)
 
 
-Below you can find a complete example with those two properties beeing used:
+Below you can find a complete example with these three properties beeing used:
 ```
 {
  	module: 'MMM-SimpleText',
@@ -106,8 +108,12 @@ Below you can find a complete example with those two properties beeing used:
 			fontSize: {
 			  'value': 'xx-large'
 			},
+
 			fontStyle: {
 			  'value': 'italic'
+			},
+			fontWeight: {
+			  'value': '100'
 			},
 			color: {
 			  'value': '#FFFFFF'
