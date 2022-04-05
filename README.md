@@ -7,7 +7,7 @@ You can use a sentence of choice and use some minor formatting options.
 # Installation
 1. Navigate into the modules directory and clone the repo:
 ```
-  cd MagicMirror/modules
+  cd <MagicMirror>/modules # replace <MagicMirror> with your path of your magic mirror
   git clone https://github.com/SaltyRiver/MMM-SimpleText.git
 ```
 
