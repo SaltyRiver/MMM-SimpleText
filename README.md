@@ -126,6 +126,9 @@ Below you can find a complete example with those two properties beeing used:
 			filePath: {
 			  'value': 'test.txt'
 			},
+                        UniqueID: {
+                          'value': '1'
+                        },
 		}
 },
 ```
