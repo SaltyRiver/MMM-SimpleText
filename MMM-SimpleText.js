@@ -25,6 +25,10 @@ Module.register('MMM-SimpleText', {
         fileContent: {
             "value": ""
         },
+		UniqueID:
+		{
+            "value": "0"
+        },		
     },
 
     //override dom generator.
@@ -60,10 +64,16 @@ Module.register('MMM-SimpleText', {
             var filePath = this.config.filePath["value"];
             return filePath;
         };
+        
+		var getUniqueID = () => {
+            var UniqueID = this.config.UniqueID["value"];
+            return UniqueID;
+        };		
+
 
 
         var contentDiv = document.createElement("div");
-        contentDiv.id = "MMM-SimpleText-content";
+        contentDiv.id = getUniqueID();
         contentDiv.innerHTML = getText();
 
         dom.style.fontFamily = getFont();
@@ -73,14 +83,14 @@ Module.register('MMM-SimpleText', {
 
         dom.appendChild(contentDiv);
 
-
+		
 
         //Read file content if path has been given
         if (getFilePath() !== "") {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                document.getElementById("MMM-SimpleText-content").innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.config.UniqueID["value"]).innerHTML = self.config.fileContent["value"];
             });
         }
 
@@ -93,7 +103,7 @@ Module.register('MMM-SimpleText', {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                document.getElementById("MMM-SimpleText-content").innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.config.UniqueID["value"]).innerHTML = self.config.fileContent["value"];
             });
         }
 
