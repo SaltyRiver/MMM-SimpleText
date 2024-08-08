@@ -88,6 +88,14 @@ filePath: {
   'value': 'test.txt'
 },
 ```
+3. **Multiple module definitions** - to have more then one MMM-SimpleText
+module in config.js assign an unique ID to each
+```
+UniqueID: {
+  'value': '1'
+},
+```
+
 
 
 **Linebreaks** - When reading text from a file, line breaks will be included
