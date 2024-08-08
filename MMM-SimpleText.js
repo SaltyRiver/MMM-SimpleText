@@ -27,7 +27,7 @@ Module.register('MMM-SimpleText', {
         },
 		UniqueID:
 		{
-            "value": "0"
+            "value": "MMM-SimpleText-0"
         },		
     },
 
