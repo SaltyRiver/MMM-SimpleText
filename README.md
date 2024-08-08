@@ -92,7 +92,7 @@ filePath: {
 module in config.js assign an unique ID to each
 ```
 UniqueID: {
-  'value': '1'
+  'value': 'MMM-SimpleText-0'
 },
 ```
 
@@ -127,7 +127,7 @@ Below you can find a complete example with those two properties beeing used:
 			  'value': 'test.txt'
 			},
                         UniqueID: {
-                          'value': '1'
+                          'value': 'MMM-SimpleText-0'
                         },
 		}
 },
