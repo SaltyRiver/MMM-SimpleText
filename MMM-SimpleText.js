@@ -61,15 +61,15 @@ Module.register('MMM-SimpleText', {
             return filePath;
         };
         
-		iInstanceID=this.data.index;
+        iInstanceID=this.data.index;
 		
-		Log.log("MMM-SimpleText Instance ID:" + iInstanceID );
-		var uniqueID="MMM-SimpleText-"+iInstanceID
-		this.uniqueID=uniqueID; 
+        Log.log("MMM-SimpleText Instance ID:" + iInstanceID );
+        var uniqueID="MMM-SimpleText-"+iInstanceID
+        this.uniqueID=uniqueID; 
 
         var contentDiv = document.createElement("div");
 
-		contentDiv.id = uniqueID;
+        contentDiv.id = uniqueID;
         contentDiv.innerHTML = getText();
 
         dom.style.fontFamily = getFont();
@@ -86,7 +86,7 @@ Module.register('MMM-SimpleText', {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-				document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
             });
         }
 
@@ -99,7 +99,7 @@ Module.register('MMM-SimpleText', {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-				document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
             });
         }
 
