@@ -25,10 +25,6 @@ Module.register('MMM-SimpleText', {
         fileContent: {
             "value": ""
         },
-		UniqueID:
-		{
-            "value": "MMM-SimpleText-0"
-        },		
     },
 
     //override dom generator.
@@ -65,15 +61,15 @@ Module.register('MMM-SimpleText', {
             return filePath;
         };
         
-		var getUniqueID = () => {
-            var UniqueID = this.config.UniqueID["value"];
-            return UniqueID;
-        };		
-
-
+        iInstanceID=this.data.index;
+		
+        Log.log("MMM-SimpleText Instance ID:" + iInstanceID );
+        var uniqueID="MMM-SimpleText-"+iInstanceID
+        this.uniqueID=uniqueID; 
 
         var contentDiv = document.createElement("div");
-        contentDiv.id = getUniqueID();
+
+        contentDiv.id = uniqueID;
         contentDiv.innerHTML = getText();
 
         dom.style.fontFamily = getFont();
@@ -90,7 +86,7 @@ Module.register('MMM-SimpleText', {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                document.getElementById(self.config.UniqueID["value"]).innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
             });
         }
 
@@ -103,7 +99,7 @@ Module.register('MMM-SimpleText', {
             var self = this;
             this.readFileContent(function (response) {
                 self.config.fileContent["value"] = response.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                document.getElementById(self.config.UniqueID["value"]).innerHTML = self.config.fileContent["value"];
+                document.getElementById(self.uniqueID).innerHTML = self.config.fileContent["value"];
             });
         }
 
